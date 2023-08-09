@@ -43,7 +43,7 @@ button {
     font-size: .8rem;
 }
 .illustration-intro {
-    width: 50%;
+    width: 51.5%;
 }
 .section-3-div-1 {
     display: flex;
@@ -55,7 +55,7 @@ button {
     width: fit-content;
 }
 .heading {
-    padding-right: 8rem;
+    padding-right: 7rem;
     flex-direction: column;
 }
 .heading, .section-2-div-1 {
@@ -92,6 +92,13 @@ button {
     left: -33.5rem;
     top: 67rem;
 }
+p {
+    padding: 0.7rem 1.7rem;
+    background: #f16140;
+    height: fit-content;
+    border-radius: 5rem;
+    margin-bottom: 0;
+}
 .section-2-div-1 {
     width: 50%;
     padding-right: 6rem;
@@ -110,23 +117,28 @@ button {
     margin-right: 7rem;
 }
 .section-2-div-2 ul li > :first-child {
-    padding: 0.5rem 1.5rem;
-    background: hsl(12deg 89.37% 59.41%);
-    width: fit-content;
-    height: fit-content;
-    border-radius: 5rem;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0;
     color: white;
 }
 .section-2-div-2 ul {
     flex-direction: column;
 }
 .section-2-div-2 ul li {
-    gap: 2rem;
+    gap: 1rem;
+    flex-direction: column;
+}
+.benifits {
+    padding-left: 6.5rem;
 }
 .section-2-div-2 h3, .section-3 h3 {
     font-size: 1rem;
     font-weight: 700;
     color: #303f78;
+}
+.section-2-div-2 h3 {
+    margin-bottom: 0;
 }
 .comment-heading {
     padding: 5rem 8rem 4rem 8rem;
@@ -196,13 +208,22 @@ button {
     display: none;
 }
 .section-4 button {
-    color: hsl(12.13deg 88.41% 59.41%);;
+    color: hsl(12.13deg 88.41% 59.41%);
+    background: white;
 }
 .tablet-pattern-3, .tablet-pattern-4 {
     position: absolute;
 }
 footer {
     background: hsl(240deg 11.76% 13.33%);
+}
+.copyright {
+    flex-direction: column;
+    align-items: end;
+}
+.copyright h6 {
+    color: #a9a9a969;
+    font-size: .8rem;
 }
 .footer-div-1 {
     flex-direction: column;
@@ -229,9 +250,9 @@ footer input  {
     border: none;
     padding-left: 1rem;
 }
-.anchor-div {
+/* .anchor-div {
     gap: 1.5rem;
-}
+} */
 .hideItem {
     display: none;
 }
@@ -395,11 +416,20 @@ footer input  {
     .footer-button {
         color: white;
     }
-
+    footer {
+        position: relative;
+        padding: 3rem 4rem 7rem 4rem;
+    }
+    .copyright-note {
+        position: absolute;
+        bottom: 3rem;
+        left: 35%;
+    }
 }
+    
 
 @media only screen and (max-width: 600px) {
-    header, .section-1, .section-2, .section-4, footer {
+    header, .section-1, .section-2, .section-4 {
         padding: 3rem 2rem 3rem 2rem;
     }
     .heading h1 {
@@ -450,10 +480,40 @@ footer input  {
     .dots-container {
         padding: 3rem 25% 4rem 25%;
     }
+    .section-2-div-2 ul li > :first-child {
+        width: 100%;
+        background: hsl(14.29deg 100% 95.88%);
+        margin-right: 23.3rem;
+    }
+    .benifits {
+        padding-left: 0;
+        padding-right: 1rem;
+    }
+    .copyright-note {
+        left: 30%;
+    }
+}
+@media only screen and (max-width: 580px)  {
+    
 }
 @media only screen and (max-width: 500px) {
     #anchor-list {
         width: 88%;
+    }
+    .section-2-div-2 ul li > :first-child {
+        gap: 1rem;
+    }
+    .benifits {
+        padding-left: 0;
+    }
+    p {
+        padding: 0.4rem 1.3rem;
+    }
+    .h4-3 {
+        font-size: .9rem;
+    }
+    .section-2 {
+        padding: 3rem 1rem 3rem 1rem;
     }
 }
 @media only screen and (max-width: 450px) {
@@ -462,7 +522,7 @@ footer input  {
     }
 }
 @media only screen and (max-width: 376px) {
-    header, .section-1, .section-2, .section-4, footer {
+    header, .section-1, .section-4 {
         padding: 3rem 2rem 3rem 2rem;
     }
     #anchor-list {
@@ -479,5 +539,14 @@ footer input  {
     }
     .dots-container {
         padding: 3rem 25% 4rem 25%;
+    }
+    .comment-heading {
+        padding: 5rem 2rem 4rem 2rem;
+    }
+    footer {
+        padding: 3rem 2rem 7rem 2rem;
+    }
+    .copyright-note {
+        left: 19%;
     }
 }
