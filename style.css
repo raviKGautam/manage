@@ -6,21 +6,34 @@
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
 }
+header {
+    background: linear-gradient(45deg, #98e63f, #fafafa, #caf220);
+}
 .main-div {
     position: relative;
     overflow: hidden;
 }
-header, .section-1, .section-2, .section-4, footer {
+.section-2, .section-4, footer {
     padding: 3rem 8rem 3rem 8rem;
 }
+
 header {
-    position: relative;
+    /* position: relative; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background: #e4f2e6; */
+    padding: 1.5rem 8rem 1.5rem 8rem;
 }
 header ul, ul {
     list-style: none;
     gap: 2rem;
     margin: 0;
     padding: 0;
+}
+.section-1 {
+    padding: 8rem 8rem 3rem 8rem;
 }
 ul a {
     text-decoration: none;
@@ -248,13 +261,33 @@ footer input  {
 #right-angle-arrow, #left-angle-arrow {
     display: none;
 }
-@media only screen and (max-width: 991px) {
-    header, .section-1, .section-2, .section-4, footer {
-        padding: 3rem 4rem 3rem 4rem;
-    }
+@media only screen and (max-width: 1025px) {
     .section-1 {
         flex-direction: column-reverse;
-    }   
+        gap: 2rem;
+    }
+    header {
+        padding: 1.5rem 2rem 1.5rem 2rem;
+        z-index: 2;
+    } 
+    .illustration-intro {
+        width: auto;
+    }
+    .heading {
+        padding-right: 0rem;
+    }
+    .section-2-div-1 {
+        padding-right: 0rem;
+    }
+    .section-2-div-2 {  
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .section-2, .section-4, footer {
+        padding: 3rem 4rem 3rem 4rem;
+    }
+    
     .illustration-intro {
         width: 100%;
         display: grid;
@@ -263,6 +296,11 @@ footer input  {
     .anchor-div {
         gap: 5rem;
     }
+    /* header {
+        background: linear-gradient(45deg, #ff1200bd, #fe3d00, #f3b90b, #0bf314, #3dbef9, #042afe, #663faa);
+        z-index: 1;
+    } */
+    
 }
 @media only screen and (max-width: 950px) {
     .anchor-div {
@@ -292,7 +330,8 @@ footer input  {
 @media only screen and (max-width: 900px) {
     .section-3-div-1 {
         max-width: 100%;
-        transform: translateX(0);
+        transform: translateX(0%);
+        /* width: auto; */
     }
     .comment {
         min-width: 100%;
@@ -415,7 +454,7 @@ footer input  {
     }
 }
 @media only screen and (max-width: 600px) {
-    header, .section-1, .section-2, .section-4 {
+    .section-2, .section-4 {
         padding: 3rem 2rem 3rem 2rem;
     }
     .heading h1 {
@@ -518,7 +557,7 @@ footer input  {
     }
 }
 @media only screen and (max-width: 376px) {
-    header, .section-1, .section-4 {
+    .section-4 {
         padding: 3rem 2rem 3rem 2rem;
     }
     #anchor-list {
