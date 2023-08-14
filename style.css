@@ -61,7 +61,7 @@ button {
     display: flex;
     width: 100%;
     transition: 0.8s ease-in-out;
-    gap: 1.5rem;
+    /* gap: 1.5rem; */
 }
 .section-1 button, button {
     background: hsl(11.19deg 86.34% 59.8%);
@@ -141,6 +141,7 @@ p {
 .section-2-div-2 ul li {
     gap: 1rem;
     flex-direction: column;
+    padding-left: 1rem;
 }
 .benifits {
     padding-left: 6.5rem;
@@ -155,9 +156,20 @@ p {
 }
 .comment-heading {
     padding: 5rem 8rem 4rem 8rem;
+    position: relative;
 }
 .comment-heading h4 {
     font-weight: 700;
+}
+.d-flex.justify-content-center.comment-heading h1::after {
+    content: '';
+    position: absolute;
+    background: blue;
+    width: 4rem;
+    height: 0.2rem;
+    bottom: 3.5rem;
+    left: 46.5%;
+    display: block;
 }
 .comment {
     /* height: 100%; */
@@ -287,7 +299,9 @@ footer input  {
     .section-2, .section-4, footer {
         padding: 3rem 4rem 3rem 4rem;
     }
-    
+    .h4-2 {
+        margin-right: 3rem;
+    }
     .illustration-intro {
         width: 100%;
         display: grid;
@@ -370,6 +384,12 @@ footer input  {
     }
     #right-angle-arrow, #left-angle-arrow {
         top: 5.5em;
+    }
+    .hideItem {
+        display: block;
+    }
+    .hideItem img {
+        left: 25.5rem;
     }
 }
 @media only screen and (max-width: 820px) {

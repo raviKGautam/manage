@@ -19,11 +19,11 @@
                 <img src="images/logo.svg" alt="logo">
                 <div id="anchor-list" class="anchor-list hide">
                     <ul class="d-flex align-items-center">
-                        <li><a href="#">Product</a></li>
-                        <li><a href="#">Product</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Community</a></li>
+                        <li><a href="">Product</a></li>
+                        <li><a href="">Product</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Community</a></li>
                     </ul>
                 </div>
                 <img id="menuBtn" onclick="myfunction()" class="menu-open" src="images/icon-hamburger.svg" alt="">
@@ -49,33 +49,27 @@
             <div class="section-2-div-2 d-flex">
                 <ul class="d-flex">
                     <li class="d-flex">
-                        <div class="d-flex">
-                            <p>01</p>
+                        <div>01</div>
+                        <div>
                             <h3>Track company-wide progress</h3>
-                        </div>
-                        <div class="d-flex benifits">
                             <h4 class="h4-3">
                                 See how your day-to-day tasks fit into wider vision. Go from tracking progress at the milestone level all the way done to the smallest details. Never lose sight of the bigger pciture again.
                             </h4>
                         </div>
                     </li>
                     <li class="d-flex">
-                        <div class="d-flex">
-                            <p>02</p>
+                        <div>02</div>
+                        <div>
                             <h3>Advanced built-in reports</h3>
-                        </div>
-                        <div class=" d-flex benifits">
                             <h4 class="h4-3">
-                                Set internal delivery estimates and track progress toward company goals. Our costmisable dashboard helps you build out the reports you need to keep key stakeholders informed 
+                            Set internal delivery estimates and track progress toward company goals. Our costmisable dashboard helps you build out the reports you need to keep key stakeholders informed 
                             </h4>
                         </div>
                     </li>
                     <li class="d-flex">
-                        <div class="d-flex">
-                            <p>03</p>
+                        <div>03</div>
+                        <div>
                             <h3>Everything you need in one place</h3>
-                        </div>
-                        <div class=" d-flex benifits">
                             <h4 class="h4-3">
                                 Stop jumping one service to another to communicate, store files, track tasks and share documents.Mange offers all-in-one team productivity solution.
                             </h4>
@@ -89,7 +83,7 @@
         <section class="d-flex justify-content-between align-items-center section-3">
             <img id="left-angle-arrow" onclick="slide('prev')" src="images/rohit.png" alt="left-angle-arrow">
             <img id="right-angle-arrow" onclick="slide('next')" src="images/rohit 201.png" alt="right-angle-arrow">
-            <div class="section-3-div-1" id="main-slider-div">
+            <div class="section-3-div-1" id="slider">
                 <div class="comment">
                     <img src="images/avatar-anisha.png" alt="anisha">
                     <h3>Anisha Ali</h3>
@@ -105,7 +99,7 @@
                     <h3>Richard Watts</h3>
                     <h4>"Mange allows us to provide structure and product keeps us organized and focused. Ican't stop recomend them to everyone I talk to!".</h4>
                 </div>
-                <div class="comment hideItem">
+                <div class="comment">
                     <img src="images/avatar-shanai.png" alt="shanai">
                     <h3>Shanai Goough</h3>
                     <h4>"Their software allows us to track, manage and colaborate on our projekt, from anyware. It keeps the whole team in-sync whithout being intrusive."</h4>
@@ -145,28 +139,24 @@
             <div class="d-flex justify-content-between anchor-div">
                 <div>
                     <ul class="anchor-list d-flex">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Product</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="">Product</a></li>
+                        <li><a href="">About Us</a></li>
                     </ul>
                 </div>
                 <div>
                     <ul class="anchor-list d-flex">
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Community</a></li>
+                        <li><a href="">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="copyright d-flex justify-content-between">
-                <div class="d-flex footer-last-div">
-                    <input type="text" name="" id="" placeholder="Updates in your inbox">
-                    <button class="footer-button">Go</button>
-                </div>
-                <div class="copyright-note"><h6>Copyright 2020. All Rights Reserved</h6></div>
+            <div class="d-flex footer-last-div">
+                <input type="text" name="" id="" placeholder="Updates in your inbox">
+                <button class="footer-button">Go</button>
             </div>
-            -
         </footer>
     </div>
     <script src="assets/js/jquery.min.js"></script>
@@ -175,43 +165,34 @@
 
         const anchor = $('#anchor-list');
         const menuBtn = $('#menuBtn');
-        const sliderDiv = $('#main-slider-div');
 
         function myfunction() {
             if (anchor.hasClass('hide')) {
                 anchor.removeClass('hide');
                 menuBtn.attr("src", "images/icon-close.svg");
-                anchor.css
             } else {
                 anchor.addClass('hide');
                 menuBtn.attr("src", "images/icon-hamburger.svg");
-            }  
+            }
+            // anchor.fadeIn(2000);
+            // anchor.fadeOut(2000);
         }
+
         function slide(item) {
-            const mainSlider = $('#main-slider-div');
+            const slider = $('#slider');
             const comments = $('.comment');
             const width = parseFloat(comments.css('width'));
-            const currPosition = parseFloat(mainSlider.css('transform').split(',')[4]);
-            const dots = $('.dot')
-            if (item === 'next'){
-                if((Math.abs(parseInt(currPosition))) === parseInt(width * (comments.length - 1)))return;
-                mainSlider.css('transform', 'translateX(' + (currPosition - width) + 'px)');
-                
+            const currPosition = parseFloat(slider.css('transform').split(',')[4]);  
+            if (item === 'next') {
+                if ((Math.abs(parseInt(currPosition))) === parseInt(width * (comments.length - 1))) return;
+                slider.css('transform', 'translateX(' + (currPosition - width) + 'px)');
             } else {
-                if (currPosition === 0);
-                mainSlider.css('transform', 'translateX(' + (currPosition + width) +'px)');
-                
+                if (currPosition === 0) return;         
+                slider.css('transform', 'translateX(' + (currPosition + width) + 'px)');
             }
-               
-
         }
-        
+
+
     </script>
 </body>
 </html>
-
-
-<!-- git add .
-git commit -m 'asdfsd asdfs'
-git push origin master
-git pull https://github.com/raviKGautam/manage.git -->
